@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/9a0ee742-376a-4042-ab66-a84046f6e3b7)# Noroc_Eugeniu
+# Noroc_Eugeniu
 # Лабораторная работа №1. Введение в JavaScript
 
 ## Задание 1  
