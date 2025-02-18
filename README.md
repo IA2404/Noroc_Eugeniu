@@ -40,8 +40,8 @@ console.log("Сообщение в консоли");
 ![image](https://github.com/user-attachments/assets/b02a7d19-0722-4138-ac14-d68a276ea061)  
 ![image](https://github.com/user-attachments/assets/4e3ba729-1c98-4fec-bb96-68683079d5b6)  
 
-##Задание 2  
-###Работа с типами данных  
+## Задание 2  
+### Работа с типами данных  
 1. Создаю переменные:  
 ```js
 var name = "Евгений";
