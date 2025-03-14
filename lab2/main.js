@@ -1109,21 +1109,21 @@ const transactions = [
 
 
 
-  /** первая функция 
+  /** 1
    * Возвращает массив уникальных типов транзакций.
    * @param {transactions []} transactions - массив транзакций.
    * @returns {transactions []} - Возвращает массив уникальных типов транзакций.
    */
-  function getUniqueTransactionTypes(transactions) {
-    const allTransactions = transactions.flat(); // Разворачиваем массив массивов в плоский массив
-    return [...new Set(allTransactions.map(tx => tx.transaction_type))];
+function getUniqueTransactionTypes(transactions) {
+  const allTransactions = transactions.flat(); // Разворачиваем массив массивов в плоский массив
+  return [...new Set(allTransactions.map(tx => tx.transaction_type))];
 };
 console.log("\n Возвращает массив уникальных типов транзакций. \n" + getUniqueTransactionTypes(transactions));
 
 
 
 
-/** вторая функция 
+/** 2
  * Вычисляет сумму всех транзакций.
  * @param {Array<Object>} transactions - Массив транзакций.
  * @returns {number} - Возвращает сумму всех транзакций.
@@ -1137,7 +1137,7 @@ function calculateTotalAmount(transactions) {
 
 
  
- /** треться функция
+ /** 3
    Вычисляет общую сумму транзакций за указанный год, месяц и день.
  * Если передать `0`, то этот параметр будет проигнорирован.
  * @param {Array<Object>} transactions - Массив транзакций.
@@ -1169,9 +1169,8 @@ function calculateTotalAmountByDate(transactions, year, month, day) {
 
 
 
- /** четвертая функция 
+ /** 4
   * Фильтрует транзакции по заданному типу.
- *
  * @param {Array<Object>} transactions - Массив транзакций (может содержать вложенные массивы).
  * @param {string} type - Тип транзакции (например, "debit" или "credit").
  * @returns {Array<Object>} - Массив транзакций указанного типа.
@@ -1186,7 +1185,7 @@ function calculateTotalAmountByDate(transactions, year, month, day) {
 
 
 
- /** пятая функция //надо разобрать 
+ /** 5
   *  Возвращает массив транзакций, проведенных в указанном диапазоне дат от startDate до endDate.
   * @param {Array<Object>} transactions - Массив транзакций (может содержать вложенные массивы).
   * @param {string} startDate - Начальная дата в формате "YYYY-MM-DD".
@@ -1210,9 +1209,9 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
 
 
 
- /** шестая функция 
+ /** 6 
   * Возвращает массив транзакций, совершенных с указанным merchantName
-  *  @param {Array<Object>} transactions - Массив транзакций (может содержать вложенные массивы).
+  * @param {Array<Object>} transactions - Массив транзакций (может содержать вложенные массивы).
   * @param {string} merchantName - Название продавца, по которому нужно фильтровать.
   * @returns {Array<Object>} - Массив транзакций, относящихся к указанному продавцу.
   */
@@ -1225,7 +1224,7 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
 
 
 
- /** седьмая функция
+ /** 7
   * Возвращает среднее значение транзакций.
   * @param {Array<Object>} transactions - Массив транзакций (может содержать вложенные массивы).
   * Каждая транзакция должна содержать свойство `transaction_amount` (число).
@@ -1240,9 +1239,9 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
 
 
 
- /** восьмая функция
+ /** 8
   * Возвращает массив транзакций с суммой в заданном диапазоне от minAmount до maxAmount.
-  *  @param {Array<Object>} transactions - Массив транзакций.
+  * @param {Array<Object>} transactions - Массив транзакций.
   * @param {number} minAmount - Минимальная сумма транзакции.
   * @param {number} maxAmount - Максимальная сумма транзакции.
   * @returns {Array<Object>} - Массив транзакций в пределах указанного диапазона.
@@ -1256,7 +1255,7 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
 
 
 
- /** девятая функция
+ /** 9
   * Вычисляет общую сумму дебетовых транзакций
   * @param {Array<Object>} transactions - Массив транзакций. Каждая транзакция должна содержать свойство `transaction_amount` и `transaction_type`.
   * @returns {number} - Общая сумма всех дебетовых транзакций.
@@ -1271,7 +1270,7 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
 
 
 
- /** 10 //переделать или разобраться 
+ /** 10
   * Возвращает месяц, в котором было больше всего транзакций.
   * @param {Array<Object>} transactions - Массив транзакций. Каждая транзакция должна содержать свойство `transaction_date`, которое может быть строкой или объектом `Date`.
   * @returns {number} - Месяц с наибольшим количеством транзакций (от 0 до 11, где 0 - январь, 11 - декабрь).
@@ -1325,7 +1324,7 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
 
  /** 12
   * Возвращает каких транзакций больше всего.
-  *  @param {Array<Object>} transactions - Массив транзакций (вложенный или одномерный).
+  * @param {Array<Object>} transactions - Массив транзакций (вложенный или одномерный).
   * @returns {string} - Тип транзакции, который встречается чаще всего: `"debit"`, `"credit"` или `"equal"`.
   */
  function mostTransactionTypes(transactions) {
@@ -1346,7 +1345,7 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
 
 
  /** 13
-  * – Возвращает массив транзакций, совершенных до указанной даты.
+  * Возвращает массив транзакций, совершенных до указанной даты.
   * @param {Array<Object>} transactions - Массив транзакций.
   * @param {string|Date} date - Дата в формате строки ("YYYY-MM-DD") или объект Date.
   * @returns {Array<Object>} - Транзакции, совершенные до указанной даты.
@@ -1369,8 +1368,8 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
  /**14
   * – Возвращает транзакцию по ее уникальному идентификатору (id).
   * @param {Array<Object>} transactions - Массив транзакций.
- * @param {string|number} id - Уникальный идентификатор транзакции.
- * @returns {Object|null} - Найденная транзакция или null, если не найдено.
+  * @param {string|number} id - Уникальный идентификатор транзакции.
+  * @returns {Object|null} - Найденная транзакция или null, если не найдено.
   */
  function findTransactionById(transactions, id) {
   transactions = transactions.flat();
@@ -1382,8 +1381,8 @@ function getTransactionsInDateRange(transactions, startDate, endDate) {
 
 
  /** 15
-  *  – Возвращает новый массив, содержащий только описания транзакций.
-  @param {Array<Object>} transactions - Массив транзакций.
+ * Возвращает новый массив, содержащий только описания транзакций.
+ * @param {Array<Object>} transactions - Массив транзакций.
  * @returns {Array<string>} - Массив строк с описаниями транзакций.
  */
 function mapTransactionDescriptions(transactions) {
