@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.green {
+  background-color: #d4edda;
+}
+
+.red {
+  background-color: #f8d7da;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+}
