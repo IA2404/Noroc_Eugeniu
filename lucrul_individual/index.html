@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>🍽 Библиотека рецептов</h1>
+
+    <form id="recipeForm">
+      <input type="text" id="title" placeholder="Название рецепта" required />
+      <input type="text" id="category" placeholder="Категория (завтрак, обед...)" required />
+      <textarea id="description" placeholder="Описание рецепта" required></textarea>
+      <button type="submit">Добавить рецепт</button>
+    </form>
+
+    <div class="filter-search">
+      <input type="text" id="searchInput" placeholder="Поиск по названию..." />
+      <select id="filterCategory">
+        <option value="all">Все категории</option>
+        <option value="Завтрак">Завтрак</option>
+        <option value="Обед">Обед</option>
+        <option value="Ужин">Ужин</option>
+        <option value="Десерт">Десерт</option>
+      </select>
+    </div>
+
+    <div id="recipeList" class="recipe-list"></div>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalCategory"></p>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
